@@ -151,6 +151,13 @@
 			"file": {
 				"/bin/tar -tzf /tmp/backup.tar.gz": [ "exec" ],
 				"/etc/sysupgrade.conf": [ "write" ],
+				"/sbin/update --test /tmp/firmware.bin": [ "exec" ],
+				"/sbin/update -e --force --auto": [ "exec" ],
+				"/sbin/update --force -b --auto": [ "exec" ],
+				"/sbin/update -b --auto": [ "exec" ],
+				"/sbin/update -e --auto": [ "exec" ],
+				"/sbin/update --force --auto": [ "exec" ],
+				"/sbin/update --auto": [ "exec" ],
 				"/sbin/firstboot -r -y": [ "exec" ],
 				"/sbin/reboot": [ "exec" ],
 				"/sbin/sysupgrade --force /tmp/firmware.bin": [ "exec" ],
